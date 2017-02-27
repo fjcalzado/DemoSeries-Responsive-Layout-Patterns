@@ -1,0 +1,128 @@
+/*Define color palete*/
+
+:root {
+    --colorBkg: rgb(227, 227, 227);
+    --colorBkgDark: rgb(168, 168, 168);
+    --colorMain: rgb(179, 129, 129);
+    --colorMainDark: rgb(121, 87, 87);
+    --colorAccent: rgb(255, 190, 166);
+    --colorDarkShadow: rgba(38, 38, 38, 0.8);
+    --colorLightShadow: rgba(38, 38, 38, 0.3);
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--colorBkg);
+}
+
+a {
+    color: var(--colorMain);
+}
+
+a:hover {
+    color: var(--colorMainDark);
+}
+
+.navbar-default {
+    border: none;
+    border-radius: 0;
+    margin-bottom: 0;
+    box-shadow: 0 2px 10px var(--colorDarkShadow);
+}
+
+.mylogo {
+    font-weight: bold;
+}
+
+.mymaincontainer {
+    max-width: 1140px;
+}
+
+.myheader {
+    background: linear-gradient(-25deg, var(--colorMain), var(--colorAccent));
+    margin-bottom: 0;
+}
+
+#id-header {
+    border-radius: 0;
+}
+
+.jumbotron h1 {
+    font-size: 5em;
+    font-weight: bolder;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.mycontentarea {
+    background-color: white;
+    box-shadow: 0 0 8px var(--colorLightShadow);
+    border-radius: 0;
+    margin-bottom: 0;
+    padding-bottom: 1em;
+}
+
+.mykeyfactsarea {
+    margin-top: 3em;
+}
+
+.mygridconfigarea {
+    margin-top: 3em;
+}
+
+.mytitleicon {
+    color: var(--colorDarkShadow);
+    font-size: 0.80em;
+}
+
+.hue-shift-img {
+    filter: hue-rotate(280deg) opacity(85%) saturate(65%);
+}
+
+/* BS Extra Small media query*/
+@media(max-width:767px) {
+    .panel, .panel-title {
+      font-size: 0.9em;
+      display: inline-block;
+    }
+}
+
+.panel-heading:hover {
+    cursor: pointer;
+}
+
+.panel-heading.collapse-with-chevron h4:before {
+    font-family: 'Glyphicons Halflings';
+    font-size: 0.8em;
+    color: var(--colorAccent);
+    text-shadow: 1px 0 0 var(--colorMain), -1px 0 0 var(--colorMain), 0 1px 0 var(--colorMain), 0 -1px 0 var(--colorMain);
+    content: "\e114  ";
+}
+
+.panel-heading.collapse-with-chevron.collapsed h4:before {
+    content: "\e080  ";
+}
+
+.panel-indented {
+  margin-left: 5em;
+}
+
+.mytable {
+    margin-top: 1em;
+    text-align: center;
+    table-layout: fixed;
+}
+
+.mytable th {
+    text-align: center;
+}
+
+.footer {
+    color: white;
+    background-color: var(--colorBkgDark);
+    padding: 1.5em;
+    box-shadow: 0 0 10px var(--colorLightShadow);
+}
+
+.contact-button {
+    color: var(--colorMainDark);
+}
