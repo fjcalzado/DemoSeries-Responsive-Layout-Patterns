@@ -1,0 +1,44 @@
+/*Define color palete*/
+
+:root {
+    --colorBkg: rgb(227, 227, 227);
+    --colorBkgDark: rgb(168, 168, 168);
+    --colorMain: rgb(129, 152, 179);
+    --colorMainDark: rgb(87, 104, 121);
+    --colorMainSuperDark: rgb(40, 50, 57);
+    --colorAccent: rgb(183, 230, 254);
+    --colorDarkShadow: rgba(38, 38, 38, 0.8);
+    --colorLightShadow: rgba(38, 38, 38, 0.3);
+}
+
+body {
+  background-color: var(--colorBkg);
+}
+
+a {
+    color: var(--colorMainDark);
+}
+
+a:hover {
+    color: var(--colorMainSuperDark);
+    text-decoration: none;
+}
+
+.jumbotron{
+  background: linear-gradient(-25deg, var(--colorMain), var(--colorAccent));
+  margin: 3em;
+  box-shadow: 0 1px 15px var(--colorDarkShadow);
+  text-align: center;
+}
+
+.jumbotron h1 {
+    font-size: 5em;
+    font-weight: bolder;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.btn-default {
+  color: var(--colorBkg);
+  background-color: var(--colorMainDark);
+  border-color: var(--colorLightShadow);
+}

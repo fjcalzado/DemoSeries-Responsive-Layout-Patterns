@@ -3,9 +3,9 @@
 :root {
     --colorBkg: rgb(227, 227, 227);
     --colorBkgDark: rgb(168, 168, 168);
-    --colorMain: rgb(131, 166, 179);
-    --colorMainDark: rgb(99, 126, 136);
-    --colorAccent: rgb(183, 254, 245);
+    --colorMain: rgb(179, 159, 130);
+    --colorMainDark: rgb(121, 107, 87);
+    --colorAccent: rgb(254, 232, 183);
     --colorDarkShadow: rgba(38, 38, 38, 0.8);
     --colorLightShadow: rgba(38, 38, 38, 0.3);
 }
@@ -35,16 +35,16 @@ a:hover {
 }
 
 .mymaincontainer {
-    max-width: 1140px;
+    /*max-width: 1140px;*/
 }
 
 .myheader {
     background: linear-gradient(-25deg, var(--colorMain), var(--colorAccent));
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+    margin-bottom: 0;
+}
 
+#id-header {
+    border-radius: 0;
 }
 
 .jumbotron h1 {
@@ -55,24 +55,27 @@ a:hover {
 
 .mycontentarea {
     background-color: white;
-    box-shadow: 0 0 5px var(--colorLightShadow);
+    box-shadow: 0 0 8px var(--colorLightShadow);
+    border-radius: 0;
+    margin-bottom: 0;
+    padding-bottom: 1em;
 }
 
 .mykeyfactsarea {
-  margin-top: 3em;
+    margin-top: 3em;
 }
 
 .mygridconfigarea {
-  margin-top: 3em;
+    margin-top: 3em;
 }
 
-.mytitleicon{
-  color: var(--colorDarkShadow);
-  font-size: 0.80em;
+.mytitleicon {
+    color: var(--colorDarkShadow);
+    font-size: 0.80em;
 }
 
 .hue-shift-img {
-    filter: hue-rotate(75deg) opacity(85%);
+    filter: hue-rotate(-48deg) opacity(85%) saturate(65%);
 }
 
 .panel-heading:hover {
@@ -92,23 +95,22 @@ a:hover {
 }
 
 .mytable {
-  margin-top: 1em;
-  text-align: center;
-  table-layout: fixed;
+    margin-top: 1em;
+    text-align: center;
+    table-layout: fixed;
 }
 
-.mytable th{
-  text-align: center;
+.mytable th {
+    text-align: center;
 }
 
 .footer {
     color: white;
     background-color: var(--colorBkgDark);
-    margin-top: 1em;
     padding: 1.5em;
     box-shadow: 0 0 10px var(--colorLightShadow);
 }
 
-.contact-button{
-  color: var(--colorMainDark);
+.contact-button {
+    color: var(--colorMainDark);
 }

@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Mostly Fluid Website</title>
+    <title>Column Drop Website</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link href="../content/mostly-fluid.css" rel="stylesheet">
+    <link href="../content/column-drop.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -16,7 +16,7 @@
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand mylogo" href="#">Mostly Fluid</a>
+                <a class="navbar-brand mylogo" href="#">Column Drop</a>
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#id-main-navbar">
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
@@ -28,8 +28,9 @@
                 <ul class="nav navbar-nav">
                     <li role="presentation" class="active"><a href="../index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
                     <li role="presentation"><a href="#id-header">Header Section</a></li>
-                    <li role="presentation"><a href="#id-articles-page">Main Section</a></li>
-                    <li role="presentation"><a href="#id-aside">Aside Section</a></li>
+                    <li role="presentation"><a href="#id-articles-column">Main Section</a></li>
+                    <li role="presentation"><a href="#id-keyfacts-column">Key Facts Section</a></li>
+                    <li role="presentation"><a href="#id-grdconfig-column">Grid Configuration Section</a></li>
                 </ul>
             </div>
         </div>
@@ -42,17 +43,47 @@
         <div class="row">
             <!-- Cool Header Example -->
             <header class="jumbotron myheader text-right" id="id-header">
-                <h1 class="cool-inset-text">Mostly Fluid</h1>
-                <h3>Example of a <em>mostly fluid</em> layout pattern</h3>
+                <h1 class="cool-inset-text">Column Drop</h1>
+                <h3>Example of a <em>column drop</em> layout pattern</h3>
             </header>
         </div>
 
-        <!-- Page in 2 columns -->
+        <!-- Page in 3 columns -->
         <div class="row panel mycontentarea">
 
-            <!-- KeyFacts & Configuration section -->
-            <div class="col-sm-4 myasidearea">
-                <aside class="mykeyfactsarea" id="id-aside">
+            <!-- Main article section -->
+            <div class="col-md-8 col-md-push-4 col-lg-6 col-lg-push-3 mymarticlearea" id="id-articles-column">
+                <article>
+                    <div class="page-header">
+                        <h2>Responsive Design <small>and adaptative layout patterns</small></h2>
+                    </div>
+                    <p><abbr title="Responsive Web Design">RWD</abbr> is an approach to web design aimed at allowing desktop webpages to be viewed in response to the size of the screen or web browser one is viewing with. Thus, using responsive design techniques,
+                        webpages layout are enabled to adapt to a <strong>variety of screen sizes</strong>.</p>
+                    <p>A key part of this design approach is the use of <strong>fluid, proportion-based grids</strong>. The fluid grid concept calls for page element sizing to be in <strong>relative units</strong> like percentages, rather than absolute units
+                        like pixels or points. For that purpose, space is divided in a row-column fashion schema where several elements can share the same row by spanning one or multiple columns.</p>
+                    <p>Implementation of responsive design has led to a common set of layouts frequently used by designers. From a high-level perspective, we could classify them into 5 categories: <em>mostly fluid</em>, <em>column drop</em>, <em>layout shifter</em>,
+                        <em>tiny tweaks</em> and <em>off canvas</em></p>
+
+                </article>
+                <article>
+                    <div class="page-header">
+                        <h2>Column Drop Layout Pattern <small>credits to <a href="http://www.lukew.com/ff/entry.asp?1514">Luke Wroblewski</a></small></h2>
+                    </div>
+                    <p>Another popular pattern starts with a multi-column layout and ends up with a single column layout, dropping columns along the way as screen sizes get narrower. Unlike the Mostly Fluid pattern, the overall size of elements in this layout
+                        tend to stay consistent.</p>
+                    <div class="thumbnail">
+                        <img class="hue-shift-img" src="http://static.lukew.com/md-patterns2.png" alt="Column drop arrangement picture">
+                        <div class="caption">
+                            <h4>Column drop behaviour illustration</h4>
+                            <p>Adapting to various screen sizes relies on stacking columns. When and how each column is stacked for each resolution breakpoint will depend on the web design itself.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- KeyFacts section -->
+            <div class="col-md-4 col-md-pull-8 col-lg-3 col-lg-pull-6 myasidearea" id="id-keyfacts-column">
+                <aside class="mykeyfactsarea">
                     <h3><span class="glyphicon glyphicon-star mytitleicon"></span> Key Facts</h3>
                     <p>The following key facts apply for this pattern:</p>
                     <div class="panel-group" id="id-accordion">
@@ -74,30 +105,34 @@
                         </div>
                         <div class="panel panel-default">
                             <div class="panel-heading collapse-with-chevron collapsed" data-toggle="collapse" data-parent="#id-accordion" href="#id-collapse3">
-                                <h4 class="panel-title">Maximum Width</h4>
+                                <h4 class="panel-title">Full Width</h4>
                             </div>
                             <div id="id-collapse3" class="panel-collapse collapse">
-                                <div class="panel-body">A maximum width is set to 1140px. For large viewport sizes, page width will not keep growing, a margin is added to both sides instead.
+                                <div class="panel-body">The whole page extends to the viewport width, growing and shrinking with it.
                                 </div>
                             </div>
                         </div>
                         <div class="panel panel-default">
                             <div class="panel-heading collapse-with-chevron collapsed" data-toggle="collapse" data-parent="#id-accordion" href="#id-collapse4">
-                                <h4 class="panel-title">Stacks on smallest size</h4>
+                                <h4 class="panel-title">Progressive stacking</h4>
                             </div>
                             <div id="id-collapse4" class="panel-collapse collapse">
-                                <div class="panel-body">Once we reach the smallest visual breakpoint, grid turns to a stacked single column layout.
+                                <div class="panel-body">When reducing size, each visual breakpoint will determine a new column to be stacked.
                                 </div>
                             </div>
                         </div>
                     </div>
                 </aside>
+            </div>
+
+            <!-- Grid Config Column -->
+            <div class="col-md-12 col-lg-3" id="#id-grdconfig-column">
                 <aside class="mygridconfigarea">
                     <h3><span class="glyphicon glyphicon-th mytitleicon"></span> Grid Configuration</h3>
                     <p>Find below the grid settings used to run this layout:</p>
                     <div class="list-group">
                         <div class="panel panel-default">
-                            <div class="panel-heading">Key Facts and Configuration Column</div>
+                            <div class="panel-heading">Key Facts Column</div>
                             <table class="table mytable">
                                 <tr>
                                     <th>XS</th>
@@ -107,9 +142,15 @@
                                 </tr>
                                 <tr>
                                     <td>-</td>
+                                    <td>-</td>
                                     <td>4</td>
-                                    <td>-</td>
-                                    <td>-</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td>pull-8</td>
+                                    <td>pull-6</td>
                                 </tr>
                             </table>
                         </div>
@@ -124,44 +165,37 @@
                                 </tr>
                                 <tr>
                                     <td>-</td>
+                                    <td>-</td>
                                     <td>8</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td>push-4</td>
+                                    <td>push-3</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Grid Configuration Column</div>
+                            <table class="table mytable">
+                                <tr>
+                                    <th>XS</th>
+                                    <th>SM</th>
+                                    <th>MD</th>
+                                    <th>LG</th>
+                                </tr>
+                                <tr>
                                     <td>-</td>
                                     <td>-</td>
+                                    <td>12</td>
+                                    <td>3</td>
                                 </tr>
                             </table>
                         </div>
                       </div>
                 </aside>
-                </div>
-
-                <!-- Main article section -->
-                <div class="col-sm-8 mymarticlearea" id="id-articles-page">
-                    <article>
-                        <div class="page-header">
-                            <h2>Responsive Design <small>and adaptative layout patterns</small></h2>
-                        </div>
-                        <p><abbr title="Responsive Web Design">RWD</abbr> is an approach to web design aimed at allowing desktop webpages to be viewed in response to the size of the screen or web browser one is viewing with. Thus, using responsive design
-                            techniques, webpages layout are enabled to adapt to a <strong>variety of screen sizes</strong>.</p>
-                        <p>A key part of this design approach is the use of <strong>fluid, proportion-based grids</strong>. The fluid grid concept calls for page element sizing to be in <strong>relative units</strong> like percentages, rather than absolute
-                            units like pixels or points. For that purpose, space is divided in a row-column fashion schema where several elements can share the same row by spanning one or multiple columns.</p>
-                        <p>Implementation of responsive design has led to a common set of layouts frequently used by designers. From a high-level perspective, we could classify them into 5 categories: <em>mostly fluid</em>, <em>column drop</em>, <em>layout shifter</em>,
-                            <em>tiny tweaks</em> and <em>off canvas</em></p>
-
-                    </article>
-                    <article>
-                        <div class="page-header">
-                            <h2>Mostly Fluid Layout Pattern <small>credits to <a href="http://www.lukew.com/ff/entry.asp?1514">Luke Wroblewski</a></small></h2>
-                        </div>
-                        <p>The most popular pattern was perhaps surprisingly simple: a multi-column layout that introduces larger margins on big screens, relies on fluid grids and images to scale from large screens down to small screen sizes, and stacks
-                            columns vertically in its narrowest incarnations.</p>
-                        <div class="thumbnail">
-                            <img class="hue-shift-img" src="http://static.lukew.com/md-patterns1.png" alt="Mostly Fluid arrangement picture">
-                            <div class="caption">
-                                <h4>Mostly fluid behaviour illustration</h4>
-                                <p>The core structure of the layout really doesn't change until the smallest screen width. Instead, the design mostly relies on fluid grids to adapt to a variety of screen sizes.</p>
-                            </div>
-                        </div>
-                    </article>
                 </div>
             </div>
         </div>
