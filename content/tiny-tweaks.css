@@ -1,0 +1,77 @@
+/*Define color palete*/
+
+:root {
+    --colorBkg: rgb(227, 227, 227);
+    --colorBkgDark: rgb(168, 168, 168);
+    --colorMain: rgb(120, 150, 106);
+    --colorMainDark: rgb(89, 121, 87);
+    --colorAccent: rgb(162, 255, 191);
+    --colorDarkShadow: rgba(38, 38, 38, 0.8);
+    --colorLightShadow: rgba(38, 38, 38, 0.3);
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--colorBkg);
+}
+
+a {
+    color: var(--colorMain);
+}
+
+a:hover {
+    color: var(--colorMainDark);
+}
+
+.navbar-default {
+    border: none;
+    border-radius: 0;
+    margin-bottom: 0;
+    box-shadow: 0 2px 10px var(--colorDarkShadow);
+}
+
+.mylogo {
+    font-weight: bold;
+}
+
+.mymaincontainer {
+    /*max-width: 1140px;*/
+}
+
+.myheader {
+    background: linear-gradient(-25deg, var(--colorMain), var(--colorAccent));
+    margin-bottom: 0;
+    padding-top: 10em;
+    padding-bottom: 10em;
+}
+
+#id-header {
+    border-radius: 0;
+}
+
+.jumbotron h1 {
+    font-size: 5em;
+    font-weight: bolder;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.hue-shift-img {
+    filter: hue-rotate(18deg) opacity(90%) saturate(80%);
+}
+
+.thumb-custom {
+  display: inline-block;
+  margin: auto;
+  padding: 0.6em;
+}
+
+.footer {
+    color: white;
+    background-color: var(--colorBkgDark);
+    padding: 1.5em;
+    box-shadow: 0 0 10px var(--colorLightShadow);
+}
+
+.contact-button {
+    color: var(--colorMainDark);
+}
