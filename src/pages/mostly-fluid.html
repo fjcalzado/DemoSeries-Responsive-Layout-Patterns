@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Mostly Fluid Website</title>
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../content/mostly-fluid.css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <!-- Navigation Bar example -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand mylogo" href="#">Mostly Fluid</a>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#id-main-navbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="id-main-navbar">
+                <ul class="nav navbar-nav">
+                    <li role="presentation" class="active"><a href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
+                    <li role="presentation"><a href="#id-header">Header Section</a></li>
+                    <li role="presentation"><a href="#">Main Section</a></li>
+                    <li role="presentation"><a href="#">Aside Section</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Lets go for the BS grid -->
+    <div class="container-fluid mymaincontainer">
+
+        <!-- Cool header! -->
+        <div class="row">
+            <!-- Cool Header Example -->
+            <header class="jumbotron myheader text-right" id="id-header">
+                <h1 class="cool-inset-text">Mostly Fluid</h1>
+                <h3>Example of a mostly fluid layout pattern</h3>
+            </header>
+        </div>
+
+        <!-- Page in 2 columns -->
+        <div class="row panel mypage">
+
+            <!-- KeyFacts section -->
+            <div class="col-sm-4 myasidearea">
+                <aside>
+                    <h3>Key Facts</h3>
+                    <p>The following key facts apply for this pattern:</p>
+                    <div class="panel-group" id="id-accordion">
+                        <div class="panel panel-default">
+                            <div class="panel-heading collapse-with-chevron collapsed" data-toggle="collapse" data-parent="#id-accordion" href="#id-collapse1">
+                                <h4 class="panel-title">Fluid Grid</h4>
+                            </div>
+                            <div id="id-collapse1" class="panel-collapse collapse">
+                                <div class="panel-body">The Layout of this site is based on Bootstrap responsive grid.</div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading collapse-with-chevron collapsed" data-toggle="collapse" data-parent="#id-accordion" href="#id-collapse2">
+                                <h4 class="panel-title">Multi-Column Layout</h4>
+                            </div>
+                            <div id="id-collapse2" class="panel-collapse collapse">
+                                <div class="panel-body">Main page is divided into 2 column. Article section spans 8 <abbr title="Number of Bootstrap grid columns out of 12">units</abbr> while Key Facts section spans 4.</div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading collapse-with-chevron collapsed" data-toggle="collapse" data-parent="#id-accordion" href="#id-collapse3">
+                                <h4 class="panel-title">Maximum Width</h4>
+                            </div>
+                            <div id="id-collapse3" class="panel-collapse collapse">
+                                <div class="panel-body">A maximum width is set to 1140px. For large viewport sizes, page width will not keep growing, a margin is added to both sides instead.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading collapse-with-chevron collapsed" data-toggle="collapse" data-parent="#id-accordion" href="#id-collapse4">
+                                <h4 class="panel-title">Stacks on smallest size</h4>
+                            </div>
+                            <div id="id-collapse4" class="panel-collapse collapse">
+                                <div class="panel-body">Once we reach the smallest visual breakpoint, grid turns to a stacked single column layout.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- Main article section -->
+            <div class="col-sm-8 mymarticlearea">
+                <article>
+                    <div class="page-header">
+                        <h2>Responsive Design <small>and adaptative layout patterns</small></h2>
+                    </div>
+                    <p><abbr title="Responsive Web Design">RWD</abbr> is an approach to web design aimed at allowing desktop webpages to be viewed in response to the size of the screen or web browser one is viewing with. Thus, using responsive design techniques,
+                        webpages layout are enabled to adapt to a <strong>variety of screen sizes</strong>.</p>
+                    <p>A key part of this design approach is the use of <strong>fluid, proportion-based grids</strong>. The fluid grid concept calls for page element sizing to be in <strong>relative units</strong> like percentages, rather than absolute units
+                        like pixels or points. For that purpose, space is divided in a row-column fashion schema where several elements can share the same row by spanning one or multiple columns.</p>
+                    <p>Implementation of responsive design has led to a common set of layouts frequently used by designers. From a high-level perspective, we could classify them into 5 categories: <em>mostly fluid</em>, <em>column drop</em>, <em>layout shifter</em>,
+                        <em>tiny tweaks</em> and <em>off canvas</em></p>
+
+                </article>
+                <article>
+                    <div class="page-header">
+                        <h2>Mostly Fluid Layout Pattern <small>credits to <a href="http://www.lukew.com/ff/entry.asp?1514">Luke Wroblewski</a></small></h2>
+                    </div>
+                    <p>The most popular pattern was perhaps surprisingly simple: a multi-column layout that introduces larger margins on big screens, relies on fluid grids and images to scale from large screens down to small screen sizes, and stacks columns
+                        vertically in its narrowest incarnations.</p>
+                    <div class="thumbnail">
+                        <img class="hue-shift-img" src="http://static.lukew.com/md-patterns1.png" alt="Mostly Fluid arrangement picture">
+                        <div class="caption">
+                            <h4>Mostly fluid behaviour illustration</h4>
+                            <p>The core structure of the layout really doesn't change until the smallest screen width. Instead, the design mostly relies on fluid grids to adapt to a variety of screen sizes</p>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Simple footer -->
+    <footer class="container-fluid footer">
+      <h5 class="pull-left">Copyright &copy 2017 Javier Calzado.</h5>
+      <a href="mailto:fjcalzadosp@gmail.com">
+      <button type="button" class="btn btn-default pull-right contact-button"><span class="glyphicon glyphicon-envelope"></span>  Contact Me</button>
+      </a>
+    </footer>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
