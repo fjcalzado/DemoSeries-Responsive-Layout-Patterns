@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Off Canvas Website</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="../content/off-canvas.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <!-- Navigation Bar example -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand mylogo" href="#">Off Canvas</a>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#id-main-navbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="id-main-navbar">
+                <ul class="nav navbar-nav">
+                    <li role="presentation" class="active"><a href="../index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
+                    <li role="presentation"><a href="#id-header">Header Section</a></li>
+                    <li role="presentation"><a href="javascript:noFeatAvailable()">Main Section</a></li>
+                    <li role="presentation"><a href="javascript:noFeatAvailable()">Key Facts Section</a></li>
+                    <li role="presentation"><a href="javascript:noFeatAvailable()">Grid Configuration Section</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Lets go for the BS grid -->
+    <div class="container-fluid mymaincontainer">
+
+        <!-- Cool header! -->
+        <div class="row">
+            <!-- Cool Header Example -->
+            <header class="jumbotron myheader text-right" id="id-header">
+                <h1>Off Canvas</h1>
+                <h3>Example of an <em>off canvas</em> layout pattern</h3>
+            </header>
+        </div>
+
+        <!-- Page in 3 columns -->
+        <div class="row panel mycontentarea">
+
+            <!-- KeyFacts section -->
+            <div class="hidden-xs col-sm-3 col-md-3 myasidearea" id="id-keyfacts-column">
+                <aside class="mykeyfactsarea">
+                    <h3><span class="glyphicon glyphicon-star mytitleicon"></span> Key Facts</h3>
+                    <p>The following key facts apply for this pattern:</p>
+                    <div class="panel-group" id="id-accordion">
+                        <div class="panel panel-default">
+                            <div class="panel-heading collapse-with-chevron collapsed" data-toggle="collapse" data-parent="#id-accordion" href="#id-collapse1">
+                                <h4 class="panel-title">Fluid Grid</h4>
+                            </div>
+                            <div id="id-collapse1" class="panel-collapse collapse">
+                                <div class="panel-body">The Layout of this site is based on Bootstrap responsive grid.</div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading collapse-with-chevron collapsed" data-toggle="collapse" data-parent="#id-accordion" href="#id-collapse2">
+                                <h4 class="panel-title">Multi-Column Layout</h4>
+                            </div>
+                            <div id="id-collapse2" class="panel-collapse collapse">
+                                <div class="panel-body">Main page is divided into 3 column. Article section acting as the main column, and 2 aside columns: Key Facts and Grid Configuration.</div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading collapse-with-chevron collapsed" data-toggle="collapse" data-parent="#id-accordion" href="#id-collapse3">
+                                <h4 class="panel-title">Maximum Width</h4>
+                            </div>
+                            <div id="id-collapse3" class="panel-collapse collapse">
+                                <div class="panel-body">A maximum width is set to 1140px. For large viewport sizes, page width will not keep growing, a margin is added to both sides instead.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading collapse-with-chevron collapsed" data-toggle="collapse" data-parent="#id-accordion" href="#id-collapse4">
+                                <h4 class="panel-title">No stacking</h4>
+                            </div>
+                            <div id="id-collapse4" class="panel-collapse collapse">
+                                <div class="panel-body">No-stacking strategy when size is reduced. Instead, colums are hidden and can be shown by the user on demand.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- Main article section -->
+            <div class="col-sm-9 col-md-6 mymarticlearea" id="id-articles-column">
+                <article>
+                    <div class="page-header">
+                        <h2>Responsive Design <small>and adaptative layout patterns</small></h2>
+                    </div>
+                    <p><abbr title="Responsive Web Design">RWD</abbr> is an approach to web design aimed at allowing desktop webpages to be viewed in response to the size of the screen or web browser one is viewing with. Thus, using responsive design techniques,
+                        webpages layout are enabled to adapt to a <strong>variety of screen sizes</strong>.</p>
+                    <p>A key part of this design approach is the use of <strong>fluid, proportion-based grids</strong>. The fluid grid concept calls for page element sizing to be in <strong>relative units</strong> like percentages, rather than absolute units
+                        like pixels or points. For that purpose, space is divided in a row-column fashion schema where several elements can share the same row by spanning one or multiple columns.</p>
+                    <p>Implementation of responsive design has led to a common set of layouts frequently used by designers. From a high-level perspective, we could classify them into 5 categories: <em>mostly fluid</em>, <em>column drop</em>, <em>layout shifter</em>,
+                        <em>tiny tweaks</em> and <em>off canvas</em></p>
+                </article>
+                <article>
+                    <div class="page-header">
+                        <h2>Off Canvas Layout Pattern <small>credits to <a href="http://www.lukew.com/ff/entry.asp?1514">Luke Wroblewski</a></small></h2>
+                    </div>
+                    <p>While there's a lot of variety in the responsive design layout patterns reviewed so far there's also some common characteristics. They all tend to stack everything vertically on small screens resulting in long pages full of diverse
+                        components. Perhaps less obviously, they all also rely only on the screen space available to them to make layout adjustments.</p>
+                    <p>But isn't that the point of adapting layout to multiple screen sizes -to make them fit? Only if we limit our options to what's currently visible. In fact, you might say there's always more space off-screen for layout adjustments than
+                        there is on-screen.</p>
+                    <div class="thumbnail">
+                        <img class="hue-shift-img" src="http://static.lukew.com/md-patterns7.png" alt="Off canvas arrangement picture">
+                        <div class="caption">
+                            <h4>Off canvas behaviour illustration</h4>
+                            <p>As depicted above, the off canvas pattern for multi-device layout takes advantage of space off the screen to keep content or navigation hidden until either a larger screen size allows it to be visible or a user takes action
+                                to expose it.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Grid Config Column -->
+            <div class="hidden-xs hidden-sm col-md-3" id="#id-grdconfig-column">
+                <aside class="mygridconfigarea">
+                    <h3><span class="glyphicon glyphicon-th mytitleicon"></span> Grid Configuration</h3>
+                    <p>Find below the grid settings used to run this layout:</p>
+                    <div class="list-group">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Key Facts Column</div>
+                            <table class="table mytable">
+                                <tr>
+                                    <th>XS</th>
+                                    <th>SM</th>
+                                    <th>MD</th>
+                                    <th>LG</th>
+                                </tr>
+                                <tr>
+                                    <td>Hidden</td>
+                                    <td>3</td>
+                                    <td>3</td>
+                                    <td>-</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Main Column</div>
+                            <table class="table mytable">
+                                <tr>
+                                    <th>XS</th>
+                                    <th>SM</th>
+                                    <th>MD</th>
+                                    <th>LG</th>
+                                </tr>
+                                <tr>
+                                    <td>-</td>
+                                    <td>9</td>
+                                    <td>6</td>
+                                    <td>-</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Grid Configuration Column</div>
+                            <table class="table mytable">
+                                <tr>
+                                    <th>XS</th>
+                                    <th>SM</th>
+                                    <th>MD</th>
+                                    <th>LG</th>
+                                </tr>
+                                <tr>
+                                    <td>Hidden</td>
+                                    <td>Hidden</td>
+                                    <td>3</td>
+                                    <td>-</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Simple footer -->
+    <footer class="container-fluid footer">
+        <h5 class="pull-left">Copyright &copy 2017 Javier Calzado.</h5>
+        <a href="mailto:fjcalzadosp@gmail.com">
+            <button type="button" class="btn btn-default pull-right contact-button"><span class="glyphicon glyphicon-envelope"></span>  Contact Me</button>
+        </a>
+    </footer>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      function noFeatAvailable(){
+        alert('IMPLEMENTATION PENDING.\nJavascrip logic would be needed to swipe hidden columns.');
+      }
+    </script>
+</body>
+
+</html>
